@@ -1,6 +1,6 @@
 # BookReviewAPI
 
-A simple RESTful API built with Express.js to manage and share book reviews. This API provides endpoints for creating, retrieving, updating, and deleting book reviews, as well as managing user authentication and authorization.
+A simple RESTful API built with Express.js to manage and share book reviews. This API provides endpoints for creating, retrieving, updating, and deleting book reviews.
 
 ## Table of Contents
 - [Description](#description)
@@ -20,24 +20,28 @@ The **BookReviewAPI** allows users to:
 Built with Node.js and Express.js
 ## Features
 
-- JWT authentication and authorization.
-- Role-Based Access Control (RBAC) for user management.
 - Data validation using Joi.
-- MongoDB integration using Mongoose.
 
 ## Usage
 
 To interact with the API, you can use tools like [Postman](https://www.postman.com/) or `cURL`. Below are some example requests:
 
-- **Register a User**  
-  Send a `POST` request to create a new user:
+- **Get All Book Reviews**  
+  Send a `GET` request to retrieve all the book reviews:
 
   ```http
-  POST /api/users/register
-  Content-Type: application/json
+  POST /api/reviews
 
-  {
-    "username": "yourusername",
-    "email": "youremail@example.com",
-    "password": "yourpassword"
-  }
+## API Endpoints
+
+|       Endpoint      | Method |            Description           |
+|:-------------------:|:------:|:--------------------------------:|
+| /api/users/register | POST   | Register a new user              |
+| /api/users/login    | POST   | Login a user                     |
+| /api/reviews        | GET    | Get all book reviews             |
+| /api/reviews/:id    | GET    | Get a specific book review by ID |
+| /api/reviews        | POST   | Add a new book review            |
+| /api/reviews/:id    | PUT    | Update an existing book review   |
+| /api/reviews/:id    | DELETE | Delete a book review             |
+
+
