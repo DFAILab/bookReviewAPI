@@ -1,0 +1,35 @@
+### retreive all books
+
+GET http://localhost:3000/book
+
+### add new user
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "username": "mandy",
+  "email": "mandy@goacademyai.com",
+  "password": "123456"
+}
+
+### get specific user by username
+  
+GET http://localhost:3000/user/mandy
+
+### update user email/password for specific username
+
+PUT http://localhost:3000/user/mandy
+Content-Type: application/json
+
+{
+  "email": "mandy@goacademyai.com",
+  "password": "abcdef"
+}
+
+### retreive all users
+
+GET http://localhost:3000/user
+
+### delete specific user by username
+DELETE http://localhost:3000/user/mandy
